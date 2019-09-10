@@ -20,6 +20,7 @@ object ReleaseConstant {
   val ODS_RELEASE_SESSION: String = "ods_release.ods_01_release_session"
   // dw------------------------
   val DW_RELEASE_CUSTOMER: String = "dw_release.dw_release_customer"
+  val DW_RELEASE_REGISTER: String = "dw_release.dw_release_register_users"
 
 
 }

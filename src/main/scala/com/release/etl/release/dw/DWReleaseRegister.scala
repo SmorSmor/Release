@@ -2,20 +2,19 @@ package com.release.etl.release.dw
 
 import com.release.constant.ReleaseConstant
 import com.release.enums.ReleaseStatusEnum
+import com.release.util.SparkHelper
+import org.apache.spark.SparkConf
 import org.apache.spark.sql.{SaveMode, SparkSession}
 import org.apache.spark.storage.StorageLevel
 import org.slf4j.{Logger, LoggerFactory}
-import com.release.util.SparkHelper
-import org.apache.spark.SparkConf
 
 /**
-  * DW 投放目标客户
+  * 注册主题
   */
-object DWReleaseCustomer {
+object DWReleaseRegister {
 
   // 日志处理
-  val logger: Logger = LoggerFactory.getLogger(DWReleaseCustomer.getClass)
-
+  val logger: Logger = LoggerFactory.getLogger(DWReleaseRegister.getClass)
   /**
     * 目标客户
     * status = “01”
@@ -33,7 +32,7 @@ object DWReleaseCustomer {
       val storageleavel: StorageLevel = ReleaseConstant.DEF_STORAGE_LEVEL
       val savemode: SaveMode = ReleaseConstant.DEF_SAVEMODE
       // 获取当天字段的数据
-      val customerColumns = DWReleaseColumnsHelper.selectDWReleaseCustomerColumns()
+      val customerColumns = DWReleaseColumnsHelper.selectDWReleaseRegisterColumns()
 
       val customerColumnStatus = (col(s"${ReleaseConstant.DEF_PARTITION}")) === lit(bdp_day) and
         col(s"${ReleaseConstant.COL_RELEASE_SESSION_STATUS}") === lit(ReleaseStatusEnum.CUSTOMER.getCode)
@@ -45,7 +44,7 @@ object DWReleaseCustomer {
         .repartition(ReleaseConstant.DEF_SOURCE_PARTITIONS)
       println("查询结束--------------------------------------------------结果显示")
       customerReleaseDF.show(10, false)
-      SparkHelper.writeTableData(customerReleaseDF, ReleaseConstant.DW_RELEASE_CUSTOMER, savemode)
+      SparkHelper.writeTableData(customerReleaseDF, ReleaseConstant.DW_RELEASE_REGISTER, savemode)
 
     } catch {
       case ex: Exception => {

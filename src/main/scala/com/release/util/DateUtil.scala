@@ -4,7 +4,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 object DateUtil {
-  def dateFormat4String(date: String, formater:String="yyyyMMdd"): String = {
+  def dateFormat4String(date: String, formater:String="yyyy-MM-dd"): String = {
     if (null == date) {
       return null
     }
@@ -15,7 +15,7 @@ object DateUtil {
     datetime.format(DateTimeFormatter.ofPattern(formater))
   }
 
-  def dateFormat4StringDiff(date: String, diff :Long, formater:String="yyyyMMdd"): String = {
+  def dateFormat4StringDiff(date: String, diff :Long, formater:String="yyyy-MM-dd"): String = {
     if (null == date) {
       return null
     }
