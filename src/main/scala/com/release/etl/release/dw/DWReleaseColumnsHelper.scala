@@ -33,6 +33,29 @@ object DWReleaseColumnsHelper {
 
     columns
   }
+
+  /**
+    *
+    */
+  def selectDWReleaseExposureColumns():ArrayBuffer[String]={
+    var columns = new ArrayBuffer[String]()
+
+    columns.+=("release_session")
+    columns.+=("release_status")
+    columns.+=("device_num ")
+    columns.+=("device_type")
+    columns.+=("sources  ")
+    columns.+=("channels  ")
+    columns.+=("ct")
+    columns.+=("bdp_day")
+    columns
+
+
+  }
+
+  /**
+    *
+    */
   def selectDWReleaseRegisterColumns():ArrayBuffer[String] = {
     val columns: ArrayBuffer[String] = new ArrayBuffer[String]()
     columns.+=("get_json_object(exts,'$.user_register') user_id ")

@@ -29,6 +29,18 @@ object SparkHelper {
   }
 
   /**
+    * 读取数据表
+    */
+  def readTableData(spark: SparkSession, tableName: String) = {
+    // 回去当前时间
+    val begin = System.currentTimeMillis()
+    // 读取表
+    val tableDF = spark.read.table(tableName)
+
+    tableDF
+  }
+
+  /**
     * 写入数据
     */
   def writeTableData(sourceDF: DataFrame, tableName: String, mode: SaveMode) = {

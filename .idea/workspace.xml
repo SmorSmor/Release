@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="492554c2-245f-45f9-b03a-9f648f9c79d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseColumnsHelper.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseRegister.scala" afterDir="false" />
+    <list default="true" id="492554c2-245f-45f9-b03a-9f648f9c79d9" name="Default Changelist" comment="20190910代码">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseCustomer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseExposure.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseExposure.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/release/constant/ReleaseConstant.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/release/constant/ReleaseConstant.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseColumnsHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseColumnsHelper.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseColumnsHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseColumnsHelper.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseCustomer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseCustomer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/release/util/DateUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/release/util/DateUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseRegister.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseRegister.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/release/util/SparkHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/release/util/SparkHelper.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,16 +21,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseColumnsHelper.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/constant/ReleaseConstant.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="342">
+              <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
               <folding>
                 <element signature="e#30#66#0" expanded="true" />
               </folding>
@@ -38,20 +46,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseColumnsHelper.scala">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseExposure.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="45" column="26" lean-forward="true" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+            <state relative-caret-position="168">
+              <caret line="43" column="99" lean-forward="true" selection-start-line="43" selection-start-column="99" selection-end-line="43" selection-end-column="99" />
+              <folding>
+                <element signature="e#36#79#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/DM_Exposure_Sources.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="39" column="27" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/DM_Exposure_Cube.scala">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/util/SparkHelper.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="21" column="90" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="90" />
+            <state relative-caret-position="234">
+              <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
               <folding>
                 <element signature="e#26#54#0" expanded="true" />
               </folding>
@@ -60,31 +85,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseCustomer.scala">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.2.0/spark-sql_2.11-2.2.0-sources.jar!/org/apache/spark/sql/functions.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1416">
-              <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
-              <folding>
-                <element signature="e#36#79#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseRegister.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-541">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-              <folding>
-                <element signature="e#36#79#0" expanded="true" />
-                <element signature="e#426#450#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="108" column="64" selection-start-line="108" selection-start-column="64" selection-end-line="108" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>regis</find>
+      <find>dw</find>
+      <find>reg</find>
+      <find>customer</find>
+      <find>COL_RELEASE_AGE_RANGE</find>
+      <find>_*</find>
+      <find>&gt;</find>
+      <find>show</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -100,12 +121,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/release/util/CommonUtil.java" />
         <option value="$PROJECT_DIR$/src/main/scala/com/release/udf/QFUdf.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/release/util/DateUtil.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/release/util/SparkHelper.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseColumnsHelper.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseColumnsHelper.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/release/constant/ReleaseConstant.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseCustomer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseRegister.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseColumnsHelper.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseExposure.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseCustomer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/release/util/SparkHelper.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseCustomer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/release/constant/ReleaseConstant.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseColumnsHelper.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseExposure.scala" />
       </list>
     </option>
   </component>
@@ -119,9 +143,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1050" />
+    <option name="x" value="773" />
+    <option name="y" value="-23" />
+    <option name="width" value="1005" />
+    <option name="height" value="1014" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -132,6 +157,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,7 +257,26 @@
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="release" type="462c0819:PsiDirectoryNode" />
               <item name="release" type="462c0819:PsiDirectoryNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Release" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Release" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
               <item name="dw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Release" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Release" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
+              <item name="udf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Release" type="b2602c69:ProjectViewProjectNode" />
@@ -246,13 +291,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/release/enums" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/releaseTest" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.40804598" />
@@ -267,6 +311,7 @@
       <recent name="com.release.udf" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Release\src\main\scala\com\release\etl\release\dw" />
       <recent name="D:\Release\src\main\java\com\release\enums" />
       <recent name="D:\Release\dir" />
       <recent name="D:\Release\src\main\resources" />
@@ -284,9 +329,48 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DWReleaseRegister">
+  <component name="RunManager" selected="Application.DMReleaseExposure">
+    <configuration name="DMReleaseCustomer" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.release.etl.release.dm.DMReleaseCustomer" />
+      <module name="Release" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.release.etl.release.dm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DMReleaseExposure" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.release.etl.release.dm.DMReleaseExposure" />
+      <module name="Release" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.release.etl.release.dm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DWReleaseCustomer" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.release.etl.release.dw.DWReleaseCustomer" />
+      <module name="Release" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.release.etl.release.dw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DWReleaseExposure" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.release.etl.release.dw.DWReleaseExposure" />
       <module name="Release" />
       <extension name="coverage">
         <pattern>
@@ -313,6 +397,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DMReleaseExposure" />
+        <item itemvalue="Application.DMReleaseCustomer" />
+        <item itemvalue="Application.DWReleaseExposure" />
         <item itemvalue="Application.DWReleaseRegister" />
         <item itemvalue="Application.DWReleaseCustomer" />
       </list>
@@ -329,38 +416,46 @@
       <option name="presentableId" value="Default" />
       <updated>1568077854718</updated>
     </task>
+    <task id="LOCAL-00001" summary="20190910代码">
+      <created>1568103609990</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568103609990</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.34295303" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.56644297" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30112046" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.22268908" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067115" side_tool="true" weight="0.33613446" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32913166" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -368,18 +463,19 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.44244105" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.27449664" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32913166" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32212886" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -389,6 +485,10 @@
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
     </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20190910代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="20190910代码" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -429,30 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/udf/QFUdf.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/release/util/CommonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseColumnsHelper.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/util/DateUtil.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -463,50 +539,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseColumnsHelper.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/release/util/CommonUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" column="26" lean-forward="true" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        <state relative-caret-position="290">
+          <caret line="27" column="61" lean-forward="true" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/util/SparkHelper.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/udf/QFUdf.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="21" column="90" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="90" />
+        <state relative-caret-position="396">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseRegister.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="101" selection-start-line="16" selection-start-column="1" selection-end-line="101" />
           <folding>
-            <element signature="e#26#54#0" expanded="true" />
+            <element signature="e#36#79#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseColumnsHelper.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseCustomer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="35" column="83" selection-start-line="35" selection-start-column="83" selection-end-line="35" selection-end-column="83" />
+          <folding>
+            <element signature="e#36#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.2.0/spark-sql_2.11-2.2.0-sources.jar!/org/apache/spark/sql/SQLImplicits.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.2.0/spark-sql_2.11-2.2.0-sources.jar!/org/apache/spark/sql/Column.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="1191" column="5" lean-forward="true" selection-start-line="1191" selection-start-column="5" selection-end-line="1191" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-sources.jar!/scala/StringContext.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="98" column="81" lean-forward="true" selection-start-line="98" selection-start-column="81" selection-end-line="98" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseExposure.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+          <folding>
+            <element signature="e#37#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.2.0/spark-sql_2.11-2.2.0-sources.jar!/org/apache/spark/sql/Dataset.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="729" column="41" selection-start-line="729" selection-start-column="30" selection-end-line="729" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.2.0/spark-sql_2.11-2.2.0-sources.jar!/org/apache/spark/sql/functions.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="108" column="64" selection-start-line="108" selection-start-column="64" selection-end-line="108" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/constant/ReleaseConstant.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="25" />
+        <state relative-caret-position="342">
+          <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
           <folding>
             <element signature="e#30#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseCustomer.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseCustomer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1416">
-          <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+        <state relative-caret-position="63">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="30" />
           <folding>
             <element signature="e#36#79#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dw/DWReleaseRegister.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/util/SparkHelper.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-541">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="234">
+          <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+          <folding>
+            <element signature="e#26#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/DM_Exposure_Cube.scala">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/DM_Exposure_Sources.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseColumnsHelper.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/release/etl/release/dm/DMReleaseExposure.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="43" column="99" lean-forward="true" selection-start-line="43" selection-start-column="99" selection-end-line="43" selection-end-column="99" />
           <folding>
             <element signature="e#36#79#0" expanded="true" />
-            <element signature="e#426#450#0" expanded="true" />
           </folding>
         </state>
       </provider>

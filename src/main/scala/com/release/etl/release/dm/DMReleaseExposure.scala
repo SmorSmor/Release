@@ -1,28 +1,22 @@
-package com.release.etl.release.dw
+package com.release.etl.release.dm
 
 import com.release.constant.ReleaseConstant
-import com.release.enums.ReleaseStatusEnum
 import com.release.util.SparkHelper
 import org.apache.spark.SparkConf
-import org.apache.spark.sql.{SaveMode, SparkSession}
+import org.apache.spark.sql.{Column, SaveMode, SparkSession}
 import org.apache.spark.storage.StorageLevel
 import org.slf4j.{Logger, LoggerFactory}
 
-/**
-  * 注册主题
-  */
-object DWReleaseRegister {
-
+object DMReleaseExposure {
   // 日志处理
-  val logger: Logger = LoggerFactory.getLogger(DWReleaseRegister.getClass)
+  val logger: Logger = LoggerFactory.getLogger(DMReleaseExposure.getClass)
+
   /**
-    * 目标客户
-    * status = “01”
+    * 曝光主题
     */
   def handleReleaseJob(spark: SparkSession, appName: String, bdp_day: String) = {
     // 回去当前时间
     val begin = System.currentTimeMillis()
-
 
     try {
       // 导入隐式转换
@@ -32,19 +26,38 @@ object DWReleaseRegister {
       val storageleavel: StorageLevel = ReleaseConstant.DEF_STORAGE_LEVEL
       val savemode: SaveMode = ReleaseConstant.DEF_SAVEMODE
       // 获取当天字段的数据
-      val registerColumns = DWReleaseColumnsHelper.selectDWReleaseRegisterColumns()
+      val exposureColumns = DMReleaseColumnsHelper.selectDMReleaseExposureColumns()
 
-      val registerColumnStatus = (col(s"${ReleaseConstant.DEF_PARTITION}")) === lit(bdp_day) and
-        col(s"${ReleaseConstant.COL_RELEASE_SESSION_STATUS}") === lit(ReleaseStatusEnum.REGISTER.getCode)
+      val exposureColumnStatus = (col(s"${ReleaseConstant.DEF_PARTITION}")) === lit(bdp_day)
+      val exposureGroupColumns =
+        Seq[Column](
+          $"${ReleaseConstant.COL_RELEASE_SOURCES}",
+          $"${ReleaseConstant.COL_RELEASE_CHANNELS}",
+          $"${ReleaseConstant.COL_RELEASE_DEVICE_TYPE}",
+          $"total"
+        )
+
       // 读取数据
-      val registerReleaseDF = SparkHelper.readTableData(spark, ReleaseConstant.ODS_RELEASE_SESSION, registerColumns)
+
+      val total: Long = SparkHelper.readTableData(spark, ReleaseConstant.DW_RELEASE_EXPOSURE).count()
+
+      val exposureReleaseDF = SparkHelper.readTableData(spark, ReleaseConstant.DW_RELEASE_EXPOSURE)
         // 查询条件
-        .where(registerColumnStatus)
+        .where(exposureColumnStatus)
+        .selectExpr(exposureColumns: _*)
+        .withColumn("total", lit(total))
+        .groupBy(exposureGroupColumns: _*)
+        .agg(
+          count(s"${ReleaseConstant.COL_RELEASE_SESSION}").alias("exposure_count")
+        )
+        .selectExpr("sources", "channels", "device_type", "exposure_count", "exposure_count/total as exposure_rates")
+
+        .withColumn(ReleaseConstant.DEF_PARTITION, lit(bdp_day))
         // 重分区
         .repartition(ReleaseConstant.DEF_SOURCE_PARTITIONS)
       println("查询结束--------------------------------------------------结果显示")
-      registerReleaseDF.show(10, false)
-      SparkHelper.writeTableData(registerReleaseDF, ReleaseConstant.DW_RELEASE_REGISTER, savemode)
+      exposureReleaseDF.show(10, false)
+      //      SparkHelper.writeTableData(exposureReleaseDF, ReleaseConstant.DM_RELEASE_EXPOSURE, savemode)
 
     } catch {
       case ex: Exception => {
@@ -92,7 +105,7 @@ object DWReleaseRegister {
   }
 
   def main(args: Array[String]): Unit = {
-    val appName: String = "dw_release_register_job"
+    val appName: String = "dm_release_exposure_job"
     val bdp_day_begin: String = "2019-09-09"
     val bdp_day_end: String = "2019-09-09"
     // 执行Job
