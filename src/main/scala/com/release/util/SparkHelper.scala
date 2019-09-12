@@ -63,6 +63,7 @@ object SparkHelper {
       .getOrCreate()
     // 为了处理目标主题下面的DM层统计 年龄段做准备
     registerFun(spark)
+
     spark
   }
 
@@ -72,6 +73,12 @@ object SparkHelper {
   def registerFun(spark: SparkSession): Unit = {
     // 处理年龄段
     spark.udf.register("getAgeRange", QFUdf.getAgeRange _)
+
+    spark.udf.register("getScore",QFUdf.getScoue _)
+
+    spark.udf.register("getLevel",QFUdf.getLevel _)
+
+
   }
 
   /**
